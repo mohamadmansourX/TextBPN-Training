@@ -6,6 +6,8 @@ For the Original repo visit the following [URL](https://github.com/GXYM/TextBPN)
 # TextBPN
 Adaptive Boundary Proposal Network for Arbitrary Shape Text Detection.
 
+<img src="vis/3.png" width="70%" >
+
 ## [Original Repo](https://github.com/GXYM/TextBPN):
 The Original Repository complete code (including **training**) is not currently available and will be released in TextBPN V2. [Issue](https://github.com/GXYM/TextBPN/issues/3#issuecomment-969966908)
 
@@ -25,7 +27,7 @@ Their is a wandb support as well incase anyone interested in the emerging ML das
 - [x] Wandb API Support (Just add enable it in the [Config file](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml#L60).
 - [ ] Add more options for checkpoints managment
 
-*Note*: Their is a small typo in the validation step that'll be fixed soon.
+*Note*: Their is a a small error in the validation step. I'll be fixing it soon.
 
 ## 1.Prerequisites:
 ```text
