@@ -81,4 +81,6 @@ sh eval.sh
  
 ## Final Note
 
-Due to the high requirments of this github project (GPU 11GB+), my experiments were done using "cpu" device which is now made easy by just setting **"use_gpu"** to False using the [Config file](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml) :).
+Due to the high requirments of this github project (GPU 11GB+), my experiments were done using "cpu" device;
+
+<sup> which is now made easy by just setting **"use_gpu"** to False using the [Config file](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml) :). </sup>
