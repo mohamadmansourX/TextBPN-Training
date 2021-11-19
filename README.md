@@ -2,8 +2,20 @@
 Adaptive Boundary Proposal Network for Arbitrary Shape Text Detection； Accepted by ICCV2021.  
 ![](https://github.com/GXYM/TextBPN/blob/main/vis/1.png)  
 
-Note: The complete code (including training and testing) will be released in TextBPN V2. Relevant work is advancing, and those who are interested in our work
-can pay more attention to the updates here.
+## Original Repo:
+The Original Repo complete code (including training and testing) will be released in TextBPN V2.
+
+## My Contribution
+Until the release of TextBPN V2 source code, I developed a training extention with for the TextBPN v1 with a Config File support.
+All you have to do is play with the Config file and then 
+
+```
+python train_model.py
+```
+And the training will start.
+
+Moreover their is a wandb support incase anyone interested in the emerging ML dashboard. All you have to do is to enable it in the config file under "Wandb" section.
+
 ## 1.Prerequisites  t
   python 3.9;  
   PyTorch 1.7.0;   

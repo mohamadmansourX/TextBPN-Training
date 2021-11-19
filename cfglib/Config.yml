@@ -61,4 +61,4 @@ Wandb:
   # Wandb Configurations
   flag: False
   project: 'TextBPN'
-  name: './TD500' #Path to the dataset
+  name: 'TD500'
