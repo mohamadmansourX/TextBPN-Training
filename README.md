@@ -73,6 +73,15 @@ run:
 python train_model.py
 ```
 
+Terminal Logs:
+
+<img src="vis/logs.png" width="70%" >
+
+
+Wandb:
+
+<img src="vis/wandb.png" width="100%" >
+
 
 ## Evaluation
 run:  
