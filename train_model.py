@@ -45,30 +45,30 @@ def main():
 
     # Load the dataset
     if cfg.dataset == 'TotalText':
-        train_dataset = TotalText(cfg.train_data_root, cfg.train_data_list,
-                                transform=Augmentation(cfg.input_size, cfg.rgb_mean, cfg.rgb_std, cfg.inter_type))
-        val_dataset = TotalText(cfg.val_data_root, cfg.val_data_list,
-                                transform=BaseTransform(cfg.input_size, cfg.rgb_mean, cfg.rgb_std, cfg.inter_type))
+        train_dataset = TotalText(cfg.train_data_root, is_training=True,
+                                transform=Augmentation(cfg.train_input_size, cfg.rgb_mean, cfg.rgb_std))
+        val_dataset = TotalText(cfg.val_data_root, is_training=False,
+                                transform=BaseTransform(cfg.val_input_size, cfg.rgb_mean, cfg.rgb_std))
     elif cfg.dataset == 'CTW1500':
-        train_dataset = Ctw1500Text(cfg.train_data_root, cfg.train_data_list,
-                                    transform=Augmentation(cfg.input_size, cfg.rgb_mean, cfg.rgb_std, cfg.inter_type))
-        val_dataset = Ctw1500Text(cfg.val_data_root, cfg.val_data_list,
-                                transform=BaseTransform(cfg.input_size, cfg.rgb_mean, cfg.rgb_std, cfg.inter_type))
+        train_dataset = Ctw1500Text(cfg.train_data_root, is_training=True,
+                                    transform=Augmentation(cfg.train_input_size, cfg.rgb_mean, cfg.rgb_std))
+        val_dataset = Ctw1500Text(cfg.val_data_root, is_training=False,
+                                transform=BaseTransform(cfg.val_input_size, cfg.rgb_mean, cfg.rgb_std))
     elif cfg.dataset == 'ICDAR15':
-        train_dataset = Icdar15Text(cfg.train_data_root, cfg.train_data_list,
-                                    transform=Augmentation(cfg.input_size, cfg.rgb_mean, cfg.rgb_std, cfg.inter_type))
-        val_dataset = Icdar15Text(cfg.val_data_root, cfg.val_data_list,
-                                transform=BaseTransform(cfg.input_size, cfg.rgb_mean, cfg.rgb_std, cfg.inter_type))
+        train_dataset = Icdar15Text(cfg.train_data_root, is_training=True,
+                                    transform=Augmentation(cfg.train_input_size, cfg.rgb_mean, cfg.rgb_std))
+        val_dataset = Icdar15Text(cfg.val_data_root, is_training=False,
+                                transform=BaseTransform(cfg.val_input_size, cfg.rgb_mean, cfg.rgb_std))
     elif cfg.dataset == 'MLT2017':
-        train_dataset = Mlt2017Text(cfg.train_data_root, cfg.train_data_list,
-                                    transform=Augmentation(cfg.input_size, cfg.rgb_mean, cfg.rgb_std, cfg.inter_type))
-        val_dataset = Mlt2017Text(cfg.val_data_root, cfg.val_data_list,
-                                transform=BaseTransform(cfg.input_size, cfg.rgb_mean, cfg.rgb_std, cfg.inter_type))
+        train_dataset = Mlt2017Text(cfg.train_data_root, is_training=True,
+                                    transform=Augmentation(cfg.train_input_size, cfg.rgb_mean, cfg.rgb_std))
+        val_dataset = Mlt2017Text(cfg.val_data_root, is_training=False,
+                                transform=BaseTransform(cfg.val_input_size, cfg.rgb_mean, cfg.rgb_std))
     elif cfg.dataset == 'TD500':
         train_dataset = TD500Text(cfg.train_data_root, is_training=True,
                                 transform=Augmentation(cfg.train_input_size, cfg.train_rgb_mean, cfg.train_rgb_std))
-        val_dataset = TD500Text(cfg.val_data_root, is_training=True,
-                                transform=BaseTransform(cfg.test_size, cfg.val_rgb_mean, cfg.val_rgb_std)) #TODO cfg.test_size should be cfg.val_input_size
+        val_dataset = TD500Text(cfg.val_data_root, is_training=False,
+                                transform=BaseTransform(cfg.val_input_size, cfg.val_rgb_mean, cfg.val_rgb_std)) #TODO cfg.test_size should be cfg.val_input_size
     else:
         raise NotImplementedError
 
@@ -91,8 +91,8 @@ def main():
 
     # Load the pretrained model
     if cfg.pretrain:
-        print('Loading pretrained model from {}'.format(cfg.pretrain_model))
         model.load_model(cfg.pretrain_model)
+        print('\nSuccesfully loaded pretrained model from: "{}"\n'.format(cfg.pretrain_model))
 
     # Move the model to GPU
     if cfg.use_gpu:
@@ -100,6 +100,12 @@ def main():
         criterion = criterion.cuda()
 
     # Start training
+    print('Initializing Training Dataset from: "{}"'.format(os.path.join(os.path.join('data',cfg.train_data_root),'Train')))
+    print('Training DataLoader has {} iterations\n'.format(int(len(train_loader))))
+    print('Initializing Validation Dataset from: "{}"'.format(os.path.join(os.path.join('data',cfg.val_data_root),'Test')))
+    print('Validation DataLoader has {} iterations\n'.format(int(len(val_loader))))
+    print('An Evaluation will run every {} iteration\n'.format(cfg.val_freq))
+
     for epoch in range(cfg.epochs):
         scheduler.step()
         train(model, train_loader , criterion, scheduler, optimizer, epoch, cfg, val_loader)
@@ -228,7 +234,6 @@ def train(model, train_loader, criterion, scheduler, optimizer, epoch, cfg, val_
     scheduler.step()
     end = time.time()
 
-    print('\nEpoch: [{}/{}]: '.format(epoch, cfg.epochs))
     for i, (img, train_mask, tr_mask, distance_field,
             direction_field, weight_matrix, gt_points,
             proposal_points, ignore_tags) in enumerate(train_loader):
@@ -278,18 +283,18 @@ def train(model, train_loader, criterion, scheduler, optimizer, epoch, cfg, val_
                                                         losses_meters['cls_loss'].val, losses_meters['cls_loss'].avg, losses_meters['distance loss'].val, losses_meters['distance loss'].avg, 
                                                         losses_meters['point_loss'].val, losses_meters['point_loss'].avg, batch_time.val, batch_time.avg, data_time.val, 
                                                         data_time.avg, scheduler.get_lr()[0]))
-        '''if (i + 1) % cfg.val_freq == 0:
+        if (i + 1) % cfg.val_freq == 0:
             print("Validation Epoch [{}/{}] Step [{}/{}]: ...".format(epoch, cfg.epochs, i + 1, len(val_loader)))
-            losses_meters_val,batch_time_val, data_time_val = validation(model, val_loader, criterion, scheduler, optimizer, epoch, cfg)
+            losses_meters_val,batch_time_val, data_time_val = validation(model, val_loader, criterion, cfg)
             print('\tval_total_loss: {:.4f}({:.4f}), val_cls_loss: {:.4f}({:.4f}), '
             'val_distance_loss: {:.4f}({:.4f}), val_point_loss: {:.4f}({:.4f}), val_Batch Time: {:.4f}({:.4f}), '
             'val_Data Time: {:.4f}({:.4f})'.format(losses_meters_val['total_loss'].val, losses_meters_val['total_loss'].avg, 
                                                 losses_meters_val['cls_loss'].val, losses_meters_val['cls_loss'].avg, losses_meters_val['distance loss'].val, losses_meters_val['distance loss'].avg, 
                                                 losses_meters_val['point_loss'].val, losses_meters_val['point_loss'].avg, batch_time_val.val, batch_time_val.avg, data_time_val.val, 
                                                 data_time_val.avg))
-        '''
+        
 
-def validation(model, val_loader, criterion, scheduler, optimizer, epoch, cfg):
+def validation(model, val_loader, criterion, cfg):
     with torch.no_grad():
         model.eval()
     losses_meters_val = {'val_total_loss': AverageMeter(),

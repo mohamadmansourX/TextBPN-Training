@@ -175,7 +175,6 @@ class TextNet(nn.Module):
                              is_training=is_training, device=cfg.device, model="gcn_rnn")
 
     def load_model(self, model_path):
-        print('Loading from {}'.format(model_path))
         if cfg.use_gpu:
             state_dict = torch.load(model_path)
         else:

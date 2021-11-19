@@ -2,7 +2,7 @@ Global:
   use_gpu: False
   gpu: [0]
   print_freq: 2
-  val_freq: 1
+  val_freq: 1000
   save_freq: 10
   checkepoch: -1
   save_path: './checkpoints/'
@@ -17,7 +17,7 @@ Global:
 
 Train:
   data_root: 'data/TD500' #Path to the dataset
-  input_size: 512
+  input_size: 640
   # max polygon per image
   # synText, total-text:600; CTW1500: 1200; icdar: ; MLT: ; TD500: .
   max_annotation: 64
@@ -45,11 +45,11 @@ Train:
   gamma: 0.1
   shuffle: True
   num_workers: 0
-  batch_size: 12
+  batch_size: 2
 
 Val:
   data_root: 'data/TD500' #Path to the dataset
-  input_size: 512
+  input_size: [640, 1024]
   rgb_mean: (0.485, 0.456, 0.406)
   rgb_std: (0.229, 0.224, 0.225)
   shuffle: False
@@ -59,6 +59,6 @@ Val:
 
 Wandb:
   # Wandb Configurations
-  flag: False
+  flag: True
   project: 'TextBPN'
-  name: 'TD500'
+  name: 'TD500' #Path to the dataset
