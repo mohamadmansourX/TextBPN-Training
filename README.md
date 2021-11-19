@@ -3,8 +3,9 @@ This is an **UNOFFICIAL** repo for the TextBPN (ICCV2021).
 For the Original repo visit the following [URL](https://github.com/GXYM/TextBPN/tree/225844770e0107817be9fb86d53f873fa3eb07ae)
 
 
-# TextBPN
-Adaptive Boundary Proposal Network for Arbitrary Shape Text Detection.
+# TextBPN-Training
+
+A training extention for the paper: Adaptive Boundary Proposal Network for Arbitrary Shape Text Detection.
 
 <img src="vis/3.png" width="70%" >
 
