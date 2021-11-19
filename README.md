@@ -1,4 +1,4 @@
-This is an **UNOFFICIAL** repo for the SauvolaNet (ICDAR2021).  
+This is an **UNOFFICIAL** repo for the TextBPN (ICCV2021).  
 
 For the Original repo visit the following [URL](https://github.com/GXYM/TextBPN)
 
