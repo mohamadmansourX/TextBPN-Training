@@ -1,6 +1,6 @@
 This is an **UNOFFICIAL** repo for the TextBPN (ICCV2021).  
 
-For the Original repo visit the following [URL](https://github.com/GXYM/TextBPN)
+For the Original repo visit the following [URL](https://github.com/GXYM/TextBPN/tree/225844770e0107817be9fb86d53f873fa3eb07ae)
 
 
 # TextBPN
@@ -20,7 +20,7 @@ Adaptive Boundary Proposal Network for Arbitrary Shape Text Detection.
 
 
 
-## [Original Repo](https://github.com/GXYM/TextBPN):
+## [Original Repo](https://github.com/GXYM/TextBPN/tree/225844770e0107817be9fb86d53f873fa3eb07ae):
 The Original Repository complete code (**training**) is ***not*** currently available and will be released in TextBPN V2. [Issue](https://github.com/GXYM/TextBPN/issues/3#issuecomment-969966908)
 
 ## My Contribution
