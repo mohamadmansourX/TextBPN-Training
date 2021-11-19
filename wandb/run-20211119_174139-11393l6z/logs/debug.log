@@ -1,0 +1,140 @@
+2021-11-19 17:41:39,230 INFO    MainThread:81518 [wandb_setup.py:_flush():69] setting env: {}
+2021-11-19 17:41:39,230 INFO    MainThread:81518 [wandb_setup.py:_flush():69] setting login settings: {}
+2021-11-19 17:41:39,230 INFO    MainThread:81518 [wandb_init.py:_log_setup():336] Logging user logs to /home/mansour/Music/OtherWork/TextBPN/wandb/run-20211119_174139-11393l6z/logs/debug.log
+2021-11-19 17:41:39,230 INFO    MainThread:81518 [wandb_init.py:_log_setup():337] Logging internal logs to /home/mansour/Music/OtherWork/TextBPN/wandb/run-20211119_174139-11393l6z/logs/debug-internal.log
+2021-11-19 17:41:39,230 INFO    MainThread:81518 [wandb_init.py:init():369] calling init triggers
+2021-11-19 17:41:39,230 INFO    MainThread:81518 [wandb_init.py:init():376] wandb.init called with sweep_config: {}
+config: {'gpu': [0], 'cuda': False, 'num_workers': 1, 'batch_size': 12, 'max_epoch': 200, 'start_epoch': 0, 'lr': 0.001, 'output_dir': 'output', 'input_size': 640, 'max_annotation': 64, 'num_points': 20, 'adj_num': 4, 'max_points': 20, 'use_hard': True, 'scale': 1, 'grad_clip': 0, 'dis_threshold': 0.3, 'cls_threshold': 0.875, 'approx_factor': 0.007, 'use_gpu': False, 'print_freq': 2, 'val_freq': 1000, 'save_freq': 5, 'checkepoch': 590, 'save_path': './checkpoints/', 'pretrain': './model/TD500/TextBPN_resnet50_680.pth', 'pretrain_model': './model/TD500/TextBPN_resnet50_680.pth', 'dataset': 'TD500', 'vis_dir': 'vis_dir', 'log_dir': 'log_dir', 'output_idr': 'output', 'epochs': 200, 'device': device(type='cpu'), 'global_use_gpu': False, 'global_gpu': [0], 'global_print_freq': 2, 'global_val_freq': 1, 'global_save_freq': 10, 'global_checkepoch': -1, 'global_save_path': './checkpoints/', 'global_pretrain': True, 'global_pretrain_model': './model/TD500/TextBPN_resnet50_680.pth', 'global_dataset': 'TD500', 'global_vis_dir': 'vis_dir', 'global_log_dir': 'log_dir', 'global_output_idr': 'output', 'global_epochs': 200, 'train_data_root': 'data/TD500', 'train_input_size': 512, 'train_max_annotation': 64, 'train_num_points': 20, 'train_adj_num': 4, 'train_max_points': 20, 'train_use_hard': True, 'train_scale': 1, 'train_grad_clip': 0, 'train_dis_threshold': 0.3, 'train_cls_threshold': 0.8, 'train_approx_factor': 0.007, 'train_rgb_mean': [0.485, 0.456, 0.406], 'train_rgb_std': [0.229, 0.224, 0.225], 'train_step_size': 20, 'train_lr': 0.0001, 'train_gamma': 0.1, 'train_shuffle': True, 'train_num_workers': 0, 'train_batch_size': 12, 'val_data_root': 'data/TD500', 'val_input_size': 512, 'val_rgb_mean': [0.485, 0.456, 0.406], 'val_rgb_std': [0.229, 0.224, 0.225], 'val_shuffle': False, 'val_num_workers': 1, 'val_batch_size': 1, 'wandb_flag': True, 'wandb_project': 'TextBPN', 'wandb_name': './TD500', 'exp_name': 'Totaltext', 'mgpu': False, 'save_dir': 'checkpoints', 'loss': 'CrossEntropyLoss', 'viz': False, 'lr_adjust': 'fix', 'stepvalues': [], 'weight_decay': 0.0, 'gamma': 0.1, 'momentum': 0.9, 'optim': 'Adam', 'display_freq': 10, 'viz_freq': 50, 'log_freq': 10000, 'net': 'resnet50', 'rescale': 255.0, 'means': [0.485, 0.456, 0.406], 'stds': [0.229, 0.224, 0.225], 'test_size': [640, 1024]}
+2021-11-19 17:41:39,230 INFO    MainThread:81518 [wandb_init.py:init():418] starting backend
+2021-11-19 17:41:39,231 INFO    MainThread:81518 [backend.py:_multiprocessing_setup():71] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2021-11-19 17:41:39,238 INFO    MainThread:81518 [backend.py:ensure_launched():123] starting backend process...
+2021-11-19 17:41:39,244 INFO    MainThread:81518 [backend.py:ensure_launched():128] started backend process with pid: 81576
+2021-11-19 17:41:39,245 INFO    MainThread:81518 [wandb_init.py:init():423] backend started and connected
+2021-11-19 17:41:39,246 INFO    MainThread:81518 [wandb_init.py:init():465] updated telemetry
+2021-11-19 17:41:39,247 INFO    MainThread:81518 [wandb_init.py:init():484] communicating current version
+2021-11-19 17:41:39,947 INFO    MainThread:81518 [wandb_init.py:init():489] got version response upgrade_message: "wandb version 0.12.6 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2021-11-19 17:41:39,947 INFO    MainThread:81518 [wandb_init.py:init():497] communicating run to backend with 30 second timeout
+2021-11-19 17:41:40,325 INFO    MainThread:81518 [wandb_init.py:init():522] starting run threads in backend
+2021-11-19 17:41:44,199 INFO    MainThread:81518 [wandb_run.py:_console_start():1524] atexit reg
+2021-11-19 17:41:44,199 INFO    MainThread:81518 [wandb_run.py:_redirect():1371] redirect: SettingsConsole.REDIRECT
+2021-11-19 17:41:44,199 INFO    MainThread:81518 [wandb_run.py:_redirect():1376] Redirecting console.
+2021-11-19 17:41:44,200 INFO    MainThread:81518 [wandb_run.py:_redirect():1438] Redirects installed.
+2021-11-19 17:41:44,200 INFO    MainThread:81518 [wandb_init.py:init():546] run started, returning control to user process
+2021-11-19 17:41:44,200 INFO    MainThread:81518 [wandb_watch.py:watch():39] Watching
+2021-11-19 17:43:15,854 INFO    MainThread:81518 [wandb_run.py:_atexit_cleanup():1494] got exitcode: 255
+2021-11-19 17:43:15,854 INFO    MainThread:81518 [wandb_run.py:_restore():1466] restore
+2021-11-19 17:43:18,273 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 1
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 30403
+  total_bytes: 30403
+}
+
+2021-11-19 17:43:18,388 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 1
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 30403
+  total_bytes: 30403
+}
+
+2021-11-19 17:43:19,395 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 30403
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:19,851 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 30403
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:19,955 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 30403
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:20,057 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 49418
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:20,160 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 49418
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:20,262 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 49418
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:20,363 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 49418
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:20,466 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 49418
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:20,570 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 49418
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:20,672 INFO    MainThread:81518 [wandb_run.py:_wait_for_finish():1616] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+  media_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 49418
+  total_bytes: 49418
+}
+
+2021-11-19 17:43:21,839 INFO    MainThread:81518 [wandb_run.py:_show_summary():1771] rendering summary
+2021-11-19 17:43:21,839 INFO    MainThread:81518 [wandb_run.py:_show_history():1809] rendering history
+2021-11-19 17:43:21,839 INFO    MainThread:81518 [wandb_run.py:_show_files():1838] logging synced files

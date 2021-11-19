@@ -1,0 +1,64 @@
+Global:
+  use_gpu: False
+  gpu: [0]
+  print_freq: 2
+  val_freq: 1
+  save_freq: 10
+  checkepoch: -1
+  save_path: './checkpoints/'
+  pretrain: True
+  pretrain_model: './model/TD500/TextBPN_resnet50_680.pth'
+  dataset: 'TD500'
+  vis_dir: 'vis_dir'
+  log_dir: 'log_dir'
+  output_idr: 'output'
+  epochs: 200
+
+
+Train:
+  data_root: 'data/TD500' #Path to the dataset
+  input_size: 512
+  # max polygon per image
+  # synText, total-text:600; CTW1500: 1200; icdar: ; MLT: ; TD500: .
+  max_annotation: 64
+  # control points number
+  num_points: 20
+  # adj num for graph
+  adj_num: 4
+  # max point per polygon for annotation
+  max_points: 20
+  # use hard examples (annotated as '#')
+  use_hard: True
+  # prediction on 1/scale feature map
+  scale: 1
+  # # clip gradient of loss
+  grad_clip: 0
+  # demo tcl threshold
+  dis_threshold: 0.3
+  cls_threshold: 0.8
+  # Contour approximation factor
+  approx_factor: 0.007
+  rgb_mean: (0.485, 0.456, 0.406)
+  rgb_std: (0.229, 0.224, 0.225)
+  step_size: 20
+  lr: 1e-4
+  gamma: 0.1
+  shuffle: True
+  num_workers: 0
+  batch_size: 12
+
+Val:
+  data_root: 'data/TD500' #Path to the dataset
+  input_size: 512
+  rgb_mean: (0.485, 0.456, 0.406)
+  rgb_std: (0.229, 0.224, 0.225)
+  shuffle: False
+  num_workers: 1
+  batch_size: 1
+
+
+Wandb:
+  # Wandb Configurations
+  flag: False
+  project: 'TextBPN'
+  name: './TD500' #Path to the dataset
