@@ -37,7 +37,7 @@ All you have to do is to enable it in the [config file under "Wandb" section](ht
 
 
 #### TODO List
-- [x] Training. Added training scripts for both *pretrained* and *from scratch* model. 
+- [x] Training; Added training scripts for both *pretrained* and *from scratch* model. 
 - [x] [Configuration](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml) file to easily customize things
 - [x] Wandb API Support (Just add enable it in the [Config file](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml#L60).
 - [ ] Add more options for checkpoints managment
