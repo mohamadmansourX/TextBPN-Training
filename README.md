@@ -69,4 +69,4 @@ sh eval.sh
  
 ## 6. Final Note
 
-Due to the high requirments of this github project (GPU 11GB+), my experiments were done using "cpu" device.
+Due to the high requirments of this github project (GPU 11GB+), my experiments were done using "cpu" device which is now made easy by setting "use_gpu" to False using the Config file :).
