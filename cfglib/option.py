@@ -99,7 +99,6 @@ class BaseOptions(object):
         self.args = self.parse(fixed)
         tmpp=copy.copy(self.args.__dict__)
         for i in tmpp:
-            print(i)
             if self.args.__dict__[i] is None:
                 delattr(self.args, i)
         if 'gpu' in self.args.__dict__:
