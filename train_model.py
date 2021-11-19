@@ -26,7 +26,6 @@ def main():
     cfg = init_config()
     option = BaseOptions()
     args = option.initialize()
-    print(args)
     update_config(cfg, args)
     print_config(cfg)
     
