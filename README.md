@@ -9,7 +9,7 @@ Adaptive Boundary Proposal Network for Arbitrary Shape Text Detection.
 <img src="vis/3.png" width="70%" >
 
 ## [Original Repo](https://github.com/GXYM/TextBPN):
-The Original Repository complete code (including **training**) is *not* currently available and will be released in TextBPN V2. [Issue](https://github.com/GXYM/TextBPN/issues/3#issuecomment-969966908)
+The Original Repository complete code (**training**) is ***not*** currently available and will be released in TextBPN V2. [Issue](https://github.com/GXYM/TextBPN/issues/3#issuecomment-969966908)
 
 ## My Contribution
 Meanwhile and until the release of TextBPN V2 source code, I developed a training extention for the TextBPN with a [Config File](https://github.com/mohamadmansourX/TextBPN-Training/blob/main/cfglib/Config.yml) support.
