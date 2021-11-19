@@ -31,7 +31,9 @@ All you have to do is play with the Config file and run the following script:
 python train_model.py
 ```
 
-Their is a wandb support as well incase anyone interested in the emerging ML dashboard. All you have to do is to enable it in the [config file under "Wandb" section](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml#L60).
+Wandb is suported as well incase anyone interested in the emerging ML dashboard. 
+
+All you have to do is to enable it in the [config file under "Wandb" section](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml#L60).
 
 
 #### TODO List
