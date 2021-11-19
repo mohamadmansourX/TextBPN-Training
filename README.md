@@ -63,7 +63,7 @@ Their is a wandb support as well incase anyone interested in the emerging ML das
 ## Training
 
 ### Configuration Settings:
-Change the Config file as needed.
+Change the [Config file](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml) as needed.
 
 ### Training:
 
@@ -83,4 +83,4 @@ sh eval.sh
 
 Due to the high requirments of this github project (GPU 11GB+), my experiments were done using "cpu" device;
 
-<sup> which is now made easy by just setting **"use_gpu"** to False using the [Config file](https://github.com/mohamadmansourX/TextBPN-Training/blob/eb958af28e10ee53af06f8b7e0cad49c82bf057b/cfglib/Config.yml) :). </sup>
+<sup> which is now made easy by just setting **"use_gpu"** to False using the Config file :). </sup>
