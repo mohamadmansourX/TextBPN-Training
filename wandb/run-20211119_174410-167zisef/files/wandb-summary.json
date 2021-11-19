@@ -1,1 +1,0 @@
-{"total_loss": 0.3859143853187561, "cls_loss": 0.0628744438290596, "distance loss": 0.03601294010877609, "point_loss": 0.11705141514539719, "_runtime": 12, "_timestamp": 1637336662, "_step": 0, "graph_0": {"_type": "graph-file", "path": "media/graph/graph_0_summary_bd8001a8.graph.json", "sha256": "bd8001a8ed695f2ccc539e0c6692bceb47060fb546172be6816ea043aa4fea89", "size": 29632}}
