@@ -46,14 +46,25 @@ All you have to do is to enable it in the [config file under "Wandb" section](ht
 *Note*: Their is a a small error in the validation step. I'll be fixing it soon.
 
 ## Prerequisites:
+*GPU Inference:*
 ```text
   python 3.9;  
   PyTorch 1.7.0;   
   Numpy >=1.2.0   
   CUDA 11.1;  
   GCC >=10.0;   
-  NVIDIA GPU(with 11G or larger GPU memory for inference);  
+  NVIDIA GPU(with 11G or larger GPU memory for inference);
 ```
+*Non-GPU Inference:*
+
+1- Skip the above GPU-related requirments
+
+2- Make sure to have good RAMs
+
+3- Set the Config `use_gpu` to False
+
+and your can run the inference using CPU
+
 ## Dataset Links  
 1. [CTW1500](https://drive.google.com/file/d/1A2s3FonXq4dHhD64A2NCWc8NQWMH2NFR/view?usp=sharing)   
 2. [TD500](https://drive.google.com/file/d/1ByluLnyd8-Ltjo9AC-1m7omZnI-FA1u0/view?usp=sharing)  
