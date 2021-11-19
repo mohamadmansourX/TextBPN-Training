@@ -87,6 +87,7 @@ run:
 python train_model.py
 ```
 
+#### Few steps demo using pretrained checkpoint (ICCV2021_model/TD500/TextBPN_resnet50_680.pth)
 Terminal Logs:
 
 <img src="vis/logs.png" width="70%" >
