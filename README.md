@@ -7,6 +7,8 @@ For the Original repo visit the following [URL](https://github.com/GXYM/TextBPN/
 
 A training extention for the paper: Adaptive Boundary Proposal Network for Arbitrary Shape Text Detection.
 
+**Mainly** implementing a training script for the model [my_train_model.py](https://github.com/mohamadmansourX/TextBPN-Training/blob/main/my_train_model.py)
+
 <img src="vis/3.png" width="70%" >
 
 # Contents
@@ -84,7 +86,7 @@ Change the [Config file](https://github.com/mohamadmansourX/TextBPN-Training/blo
 
 run:
 ```
-python train_model.py
+python my_train_model.py
 ```
 
 #### Few steps demo using pretrained checkpoint (ICCV2021_model/TD500/TextBPN_resnet50_680.pth)
