@@ -30,7 +30,7 @@ The Original Repository complete code (**training**) is ***not*** currently avai
 Meanwhile and until the release of TextBPN V2 source code, I developed a training extention for the TextBPN with a [Config File](https://github.com/mohamadmansourX/TextBPN-Training/blob/main/cfglib/Config.yml) support.
 All you have to do is play with the Config file and run the following script:
 ```
-python train_model.py
+python my_train_model.py
 ```
 
 Wandb is suported as well incase anyone interested in the emerging ML dashboard. 
