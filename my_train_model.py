@@ -100,6 +100,7 @@ def main():
         criterion = criterion.cuda()
 
     # Start training
+    print('Device: {}'.format(cfg.device))
     print('Initializing Training Dataset from: "{}"'.format(os.path.join(os.path.join('data',cfg.train_data_root),'Train')))
     print('Training DataLoader has {} iterations\n'.format(int(len(train_loader))))
     print('Initializing Validation Dataset from: "{}"'.format(os.path.join(os.path.join('data',cfg.val_data_root),'Test')))
