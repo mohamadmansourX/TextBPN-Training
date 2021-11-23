@@ -1,0 +1,7 @@
+model/
+data/
+**.zip
+network/__pycache__/
+dataset/__pycache__/
+# remove all __pycache__ directories in the project 
+find . -name "__pycache__" -type d -exec rm -rf {} \;
