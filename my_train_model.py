@@ -90,7 +90,7 @@ def main():
     criterion = TextLoss()
 
     # Load the pretrained model
-    if cfg.pretrain:
+    if cfg.global_pretrain:
         model.load_model(cfg.pretrain_model)
         print('\nSuccesfully loaded pretrained model from: "{}"\n'.format(cfg.pretrain_model))
 
