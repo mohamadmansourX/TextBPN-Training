@@ -6,7 +6,7 @@ Global:
   save_freq: 10
   checkepoch: -1
   save_path: './checkpoints/'
-  pretrain: True
+  pretrain: False
   pretrain_model: './model/TD500/TextBPN_resnet50_680.pth'
   dataset: 'TD500'
   vis_dir: 'vis_dir'
