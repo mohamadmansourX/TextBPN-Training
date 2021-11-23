@@ -2,6 +2,11 @@ This is an **UNOFFICIAL** repo for the TextBPN (ICCV2021).
 
 For the Original repo visit the following [URL](https://github.com/GXYM/TextBPN/tree/225844770e0107817be9fb86d53f873fa3eb07ae)
 
+The original repo *lacks the training code* for now
+
+Main Contributions: Training code, Config Support, Colab Notebook
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mohamadmansourX/TextBPN-Training/blob/main/TextBPN_Training.ipynb)
 
 # TextBPN-Training
 
