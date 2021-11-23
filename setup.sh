@@ -7,6 +7,7 @@ arr2+=( ["MSRA-TD500-model"]="13ZrWfpv2dJqdv0cDf-hE0n5JQegNY0-i" ["CTW-1500-mode
 echo "Dataset Downloading" $1
 gdown --id  ${arr[$1]}
 echo "Pretrained Model Downloading" $2
-gdown --id  ${arr[$2]}
+gdown --id  ${arr2[$2]}
 unzip -oq ${arpath[$1]} -d data/
 unzip -oq ICCV2021_model.zip
+rm -f *.zip
