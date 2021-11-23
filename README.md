@@ -7,7 +7,6 @@ The original repo *lacks the training code* for now
 Main Contributions: Training code, Config Support, Colab Notebook
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mohamadmansourX/TextBPN-Training/blob/main/TextBPN_Training.ipynb)
-
 # TextBPN-Training
 
 A training extention for the paper: Adaptive Boundary Proposal Network for Arbitrary Shape Text Detection.
